@@ -1,0 +1,24 @@
+Environment Variables
+
+rabbitmq-plugins.bat enable rabbitmq_management
+
+
+then double click rabbitmq.server
+
+go to http://localhost:15672/
+
+and enter guest as username and password
+
+using purge messages we can clear message queue
+
+consumer deals with queue not with exchange
+
+Exchange types :
+    1. Direct Exchange
+    2. Fanout Exchange
+    3. Topic Exchange
+    4. Headers Exchange
+
+1. Direct Exchange
+pass message to relevant queue after checking key
+
