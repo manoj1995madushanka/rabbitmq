@@ -32,3 +32,16 @@ in this has key combining words by . symbol
 key example : tv.mobile.ac
 * means one word
 # means one or more word
+
+4. Headers Exchange
+It is look like hashmap in java
+x-match=any
+    means or condition key can be any mentioned one
+x-match=all
+    means and condition
+there is no routing key we use headers
+
+
+fanout exchange follows publish subscribe mythology.
+direct exchange follows direct key mythology
+headers exchange does NOT deal with routing keys
