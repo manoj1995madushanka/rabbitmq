@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * contains publishing message for consumer
+ * */
 @SpringBootApplication
 public class RabbitmqApplication {
 
