@@ -27,4 +27,8 @@ their is no key like direct exchange
 producer will pass message to each queue those are bound with it
 for fanout exchange we not add routing key
 
-
+3. Topic Exchange
+in this has key combining words by . symbol
+key example : tv.mobile.ac
+* means one word
+# means one or more word
