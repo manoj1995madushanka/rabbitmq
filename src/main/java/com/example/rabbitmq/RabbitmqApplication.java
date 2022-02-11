@@ -26,6 +26,13 @@ public class RabbitmqApplication {
 		// exchange, routing key, properties, body
 		channel.basicPublish("","Queue-1",null,message.getBytes(StandardCharsets.UTF_8));
 
+		/**
+		 * exchange to exchange message passing
+		 * from direct exchange to fanout exchange
+		 * */
+		String messageExchange = "Exchange to exchange message";
+		channel.basicPublish("Direct-Exchange", "fanout", null, messageExchange.getBytes(StandardCharsets.UTF_8));
+
 		channel.close();
 		connection.close();
 	}
