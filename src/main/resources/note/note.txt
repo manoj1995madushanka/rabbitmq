@@ -1,3 +1,5 @@
+need to install rabbitmq and erlang otp
+
 Environment Variables
 
 rabbitmq-plugins.bat enable rabbitmq_management
