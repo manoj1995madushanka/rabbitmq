@@ -1,4 +1,4 @@
-package com.example.rabbitmq;
+package com.example.rabbitmq.fanoutexchange;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -9,10 +9,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * contains logic for receive message from topic exchange
+ * contains logic for consume fanout exchange messages
  * */
-public class TopicExchangeConsumer {
-
+public class FanoutExchangeConsumer {
     public static void main(String[] args) throws IOException, TimeoutException {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         Connection connection = connectionFactory.newConnection();
@@ -22,7 +21,7 @@ public class TopicExchangeConsumer {
             String message = new String(delivery.getBody());
             System.out.println("Message Received: " + message);
         };
-        channel.basicConsume("Mobile", true, deliverCallback, consumerTag -> {
+        channel.basicConsume("TV", true, deliverCallback, consumerTag -> {
         });
     }
 }
