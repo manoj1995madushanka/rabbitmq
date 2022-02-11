@@ -45,3 +45,14 @@ there is no routing key we use headers
 fanout exchange follows publish subscribe mythology.
 direct exchange follows direct key mythology
 headers exchange does NOT deal with routing keys
+
+
+
+when we upload jar to spring cloud we do not need to add properties to application.property file
+because spring cloud automatically setup those using binded services
+application.property need s when we upload our jar to pivotal cloud
+
+if we deploy war file we need to bind java build pack github url with -b
+eg: cf push app-name -p file-location -b cloud-fondary-java-buildpack-github-link
+
+
